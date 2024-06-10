@@ -1,0 +1,120 @@
+/* Set box-sizing and height for the html element */
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Reset margin and padding for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the body element */
+body {
+    align-items: center;
+    background-color: transparent;
+    background-image: radial-gradient(#000000 1px, #fff6de 1px);
+    background-size: 30px 30px;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* Style the wrapper container */
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.75);
+    background: #ffffff00;
+    border: 1px solid rgb(255, 255, 255);
+    width: 400px;
+    height: 540px;
+    padding: 20px 35px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+/* Style the screen element */
+.screen {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(248, 248, 248, 0.342);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: black;
+    font-size: 35px;
+    padding: 15px;
+    text-align: right;
+}
+
+/* Style the calculator buttons container */
+.calculator_buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* Style the calculator button */
+.calculator_button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: #f8f7e344;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Style the calculator button on hover */
+.calculator_button:hover {
+    background-color: #96ec8544;
+}
+
+/* Style the calculator button on active state */
+.calculator_button:active {
+    background-color: #67a55ba2;
+}
+
+/* Style the last calculator button on hover */
+.calculator_button.last-child:hover {
+    background-color: #96ec8544;
+    color: inherit;
+}
+
+.operator{
+    background-color: #96ec85a8;
+    color: inherit;
+}
+.operator:hover{
+    background-color: #96ec85fb;
+    color: inherit;
+}
+.operator:active {
+    background-color: #67a55ba2;
+}
+
+/* Span three rows for the double_vertical class */
+.double_vertical {
+    grid-row: span 3;
+}
+
+/* Span two columns for the double_horizontal class */
+.double_horizontal {
+    grid-column: span 1;
+}
+
